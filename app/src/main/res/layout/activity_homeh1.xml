@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Homeh1Activity">
+        tools:context=".Home.Homehotel1Activity">
 
         <TextView
             android:id="@+id/textView9"

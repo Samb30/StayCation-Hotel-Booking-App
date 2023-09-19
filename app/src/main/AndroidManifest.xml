@@ -7,6 +7,7 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -21,95 +22,99 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31" >
+
         <activity
-            android:name=".Homeh4Activity"
+            android:name=".Home.BookingsActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".Home.Homehotel4Activity"
             android:exported="true" />
         <activity
-            android:name=".Homeh3Activity"
+            android:name=".Home.Homehotel3Activity"
             android:exported="true" />
         <activity
-            android:name=".Homeh2Activity"
+            android:name=".Home.Homehotel2Activity"
             android:exported="true" />
         <activity
-            android:name=".Homeh1Activity"
+            android:name=".Home.Homehotel1Activity"
             android:exported="true" />
         <activity
-            android:name=".PinfoActivity"
+            android:name=".Profile.PinfoActivity"
             android:exported="true" />
         <activity
-            android:name=".FeedbackActivity"
+            android:name=".Profile.FeedbackActivity"
             android:exported="true" />
         <activity
-            android:name=".HelpActivity"
+            android:name=".Profile.HelpActivity"
             android:exported="true" />
         <activity
-            android:name=".Home2Activity"
+            android:name=".Home.Home2Activity"
             android:exported="true" />
         <activity
-            android:name=".h15Activity"
+            android:name=".Hotels.hotelindore3"
             android:exported="true" />
         <activity
-            android:name=".h14Activity"
+            android:name=".Hotels.hotelindore2"
             android:exported="true" />
         <activity
-            android:name=".h13Activity"
+            android:name=".Hotels.hotelindore1"
             android:exported="true" />
         <activity
-            android:name=".h12Activity"
+            android:name=".Hotels.hoteljaipur3"
             android:exported="true" />
         <activity
-            android:name=".h11Activity"
+            android:name=".Hotels.hoteljaipur2"
             android:exported="true" />
         <activity
-            android:name=".h10Activity"
+            android:name=".Hotels.hoteljaipur1"
             android:exported="true" />
         <activity
-            android:name=".h9Activity"
+            android:name=".Hotels.hoteldelhi3"
             android:exported="true" />
         <activity
-            android:name=".h8Activity"
+            android:name=".Hotels.hoteldelhi2"
             android:exported="true" />
         <activity
-            android:name=".h7Activity"
+            android:name=".Hotels.hoteldelhi1"
             android:exported="true" />
         <activity
-            android:name=".h6Activity"
+            android:name=".Hotels.hotelmumbai3"
             android:exported="true" />
         <activity
-            android:name=".h5Activity"
+            android:name=".Hotels.hotelmumbai2"
             android:exported="true" />
         <activity
-            android:name=".h4Activity"
+            android:name=".Hotels.hotelmumbai1"
             android:exported="true" />
         <activity
-            android:name=".h3Activity"
+            android:name=".Hotels.hotelpune3"
             android:exported="true" />
         <activity
-            android:name=".h2Activity"
+            android:name=".Hotels.hotelpune2"
             android:exported="true" />
         <activity
-            android:name=".h1Activity"
+            android:name=".Hotels.hotelpune1"
             android:exported="true" />
         <activity
-            android:name=".ConfirmActivity"
+            android:name=".Payment.ConfirmActivity"
             android:exported="true" />
         <activity
-            android:name=".Pay3Activity"
+            android:name=".Payment.Pay3Activity"
             android:exported="true" />
         <activity
-            android:name=".Pay2Activity"
+            android:name=".Payment.Pay2Activity"
             android:exported="true" />
         <activity
-            android:name=".Pay1Activity"
+            android:name=".Payment.Pay1Activity"
             android:exported="true" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".Home.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".Profile.ProfileActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"

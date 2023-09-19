@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bimg123"
-    tools:context=".PinfoActivity">
+    tools:context=".Profile.PinfoActivity">
 
     <TextView
         android:id="@+id/textView24"

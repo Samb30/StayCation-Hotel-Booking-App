@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bimg123"
-        tools:context=".ConfirmActivity">
+        tools:context=".Payment.ConfirmActivity">
 
         <Button
             android:id="@+id/button3"
@@ -37,7 +37,7 @@
             android:id="@+id/textView46"
             android:layout_width="227dp"
             android:layout_height="29dp"
-            android:layout_marginStart="132dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="564dp"
             android:fontFamily="@font/nunitoregular"
             android:text=""
@@ -51,8 +51,8 @@
             android:id="@+id/textView47"
             android:layout_width="227dp"
             android:layout_height="29dp"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="608dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="612dp"
             android:fontFamily="@font/nunitoregular"
             android:text=""
             android:textColor="#000000"
@@ -65,8 +65,8 @@
             android:id="@+id/textView48"
             android:layout_width="251dp"
             android:layout_height="29dp"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="476dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="480dp"
             android:fontFamily="@font/nunitoregular"
             android:text=""
             android:textColor="#000000"
@@ -79,8 +79,8 @@
             android:id="@+id/textView49"
             android:layout_width="227dp"
             android:layout_height="29dp"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="521dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="520dp"
             android:fontFamily="@font/nunitoregular"
             android:text=""
             android:textColor="#000000"
@@ -106,76 +106,6 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="700dp"
             android:background="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView50"
-            android:layout_width="101dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="564dp"
-            android:fontFamily="@font/nunitoregular"
-            android:text="3. Nights -"
-            android:textColor="#000000"
-            android:textFontWeight="600"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView51"
-            android:layout_width="103dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="608dp"
-            android:fontFamily="@font/nunitoregular"
-            android:text="4. Guests -"
-            android:textColor="#000000"
-            android:textFontWeight="600"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView52"
-            android:layout_width="102dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="652dp"
-            android:fontFamily="@font/nunitoregular"
-            android:text="5. Price   -"
-            android:textColor="#000000"
-            android:textFontWeight="600"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView53"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="521dp"
-            android:fontFamily="@font/nunitoregular"
-            android:text="2. Date     -"
-            android:textColor="#000000"
-            android:textFontWeight="600"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView54"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="476dp"
-            android:fontFamily="@font/nunitoregular"
-            android:text="1. Hotel    -"
-            android:textColor="#000000"
-            android:textFontWeight="600"
-            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -206,27 +136,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/pricesign2"
-            android:layout_width="61dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="647dp"
-            android:fontFamily="@font/nunitoregular"
-            android:gravity="left"
-            android:text="Rs  :"
-            android:textColor="#000000"
-            android:textFontWeight="600"
-            android:textSize="25sp"
-            app:flow_horizontalAlign="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/pricepay1"
-            android:layout_width="157dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="202dp"
-            android:layout_marginTop="647dp"
+            android:layout_width="381dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="653dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginBottom="203dp"
             android:fontFamily="@font/nunitobold"
             android:gravity="left"
             android:lineHeight="16px"
@@ -235,8 +151,12 @@
             android:textFontWeight="600"
             android:textSize="25sp"
             app:flow_horizontalAlign="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView45"

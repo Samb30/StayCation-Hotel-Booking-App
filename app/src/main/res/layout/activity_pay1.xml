@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Pay1Activity">
+        tools:context=".Payment.Pay1Activity">
 
 
         <!--    Reducing the margin top wrt parent by 49 from the Design layout-->

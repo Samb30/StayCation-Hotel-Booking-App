@@ -35,11 +35,12 @@
     <string name="backButton2">Go to Reservation page</string>
     <string name="backButton3">Go to Payment Page</string>
     <string name="title_activity_homeh1">homeh1Activity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+
+    <string name="hotel_name">Hotel Name: %1$s</string>
+    <string name="date">Date: %1$s</string>
+    <string name="no_of_nights">Number of Nights: %1$d</string>
+    <string name="no_of_guests">Number of Guests: %1$d</string>
+    <string name="total_price">Total Price: Rs. %1$d</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -77,4 +78,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="staycation">StayCation</string>
 </resources>
