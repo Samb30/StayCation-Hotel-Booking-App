@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bimg123">
+
+    <!-- RecyclerView to display bookings -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="#FFDDE1"
+        android:fontFamily="@font/nunitoregular"
+        android:padding="16dp"
+        android:text="Bookings"
+        android:textAlignment="center"
+        android:textColor="#191D21"
+        android:textFontWeight="800"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
