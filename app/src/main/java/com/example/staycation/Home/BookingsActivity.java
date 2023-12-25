@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -67,6 +68,7 @@ public class BookingsActivity extends AppCompatActivity {
         private final TextView nightsTextView;
         private final TextView guestsTextView;
         private final TextView priceTextView;
+        private final ImageButton deleteButton;
         public BookingViewHolder(@NonNull View itemView) {
             super(itemView);
             hotelNameTextView = itemView.findViewById(R.id.hotelNameTextView);
@@ -74,9 +76,24 @@ public class BookingsActivity extends AppCompatActivity {
             nightsTextView = itemView.findViewById(R.id.nightsTextView);
             guestsTextView = itemView.findViewById(R.id.guestsTextView);
             priceTextView = itemView.findViewById(R.id.priceTextView);
+            deleteButton = itemView.findViewById(R.id.deleteButton);
+        }
+
+        public void bindDeleteButton(OnDeleteClickListener onDeleteClickListener) {
+            deleteButton.setOnClickListener(v -> {
+                if (onDeleteClickListener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        onDeleteClickListener.onDeleteClick(position);
+                    }
+                }
+            });
+        }
+        public interface OnDeleteClickListener {
+            void onDeleteClick(int position);
         }
     }
-    private class BookingsAdapter extends RecyclerView.Adapter<BookingViewHolder> {
+    public class BookingsAdapter extends RecyclerView.Adapter<BookingViewHolder> implements BookingViewHolder.OnDeleteClickListener{
         private final List<DocumentSnapshot> bookingsList;
 
         public BookingsAdapter(List<DocumentSnapshot> bookingsList) {
@@ -88,9 +105,12 @@ public class BookingsActivity extends AppCompatActivity {
         public BookingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.activity_bookingitem, parent, false);
-            return new BookingViewHolder(view);
-        }
 
+            BookingViewHolder viewHolder = new BookingViewHolder(view);
+            viewHolder.bindDeleteButton(this);
+
+            return viewHolder;
+        }
         @Override
         public void onBindViewHolder(@NonNull BookingViewHolder holder, int position) {
             DocumentSnapshot bookingSnapshot = bookingsList.get(position);
@@ -106,10 +126,33 @@ public class BookingsActivity extends AppCompatActivity {
             holder.guestsTextView.setText(getString(R.string.no_of_guests, noOfGuests));
             holder.priceTextView.setText(getString(R.string.total_price, totalPrice));
         }
-
         @Override
         public int getItemCount() {
             return bookingsList.size();
+        }
+        @Override
+        public void onDeleteClick(int position) {
+            // Handle delete button click here
+            DocumentSnapshot bookingSnapshot = bookingsList.get(position);
+            // Get the document ID of the booking
+            String bookingId = bookingSnapshot.getId();
+            // Remove the booking from Firebase
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            String userId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
+            db.collection("users")
+                    .document(userId)
+                    .collection("bookingdetails")
+                    .document(bookingId)
+                    .delete()
+                    .addOnSuccessListener(aVoid -> {
+                        // Remove the booking from the local list
+                        bookingsList.remove(position);
+                        notifyItemRemoved(position);
+                    })
+                    .addOnFailureListener(e -> {
+                        // Handle failure
+                        // You might want to show an error message to the user
+                    });
         }
     }
 }

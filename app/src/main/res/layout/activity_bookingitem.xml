@@ -99,6 +99,15 @@
                     android:textColor="#000000"
                     android:textStyle="bold"
                     tools:text="Total Price: Rs. 3000" />
+                <!-- Add this ImageButton to your booking_item.xml layout -->
+                <ImageButton
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@android:drawable/ic_menu_delete"
+                    />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </ScrollView>
