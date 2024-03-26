@@ -28,7 +28,7 @@ public class HelpActivity extends AppCompatActivity {
         callButton = findViewById(R.id.registerb3);
 
         emailButton.setOnClickListener(view -> {
-            String recipientEmail = "staycation023@gmail.com";
+            String recipientEmail = "app@gmail.com";
             String emailSubject = subjectEditText.getText().toString();
             String emailBody = bodyEditText.getText().toString();
 
@@ -44,7 +44,7 @@ public class HelpActivity extends AppCompatActivity {
         });
 
         callButton.setOnClickListener(view -> {
-            String phoneNumber = "9665735792";
+            String phoneNumber = "0000000000";
 
             Intent phoneIntent = new Intent(Intent.ACTION_CALL);
 
